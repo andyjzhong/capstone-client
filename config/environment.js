@@ -52,7 +52,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/capstone-client';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://secret-garden-31573.herokuapp.com/';
+    ENV.apiHost = 'https://secret-garden-31573.herokuapp.com';
   }
 
   return ENV;

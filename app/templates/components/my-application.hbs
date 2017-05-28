@@ -22,6 +22,22 @@
 </nav>
 
 <h1>Andy's GPA Calculator App</h1>
+<br>
+
+<h3>Directions for Deploying Client</h3>
+<br>
+<p>How's it going, dude. I put this here so we can all remember how to deploy the client side. You can remove this once you are familiar with the process.</p>
+<ol>
+  <li>Make sure you have saved and committed everything on your master branch.</li>
+  <li>git push origin master</li>
+  <li>git checkout gh-pages</li>
+  <li>Make sure you have saved and committed everything on your gh-pages branch.</li>
+  <li>ember build --environment=production</li>
+  <li>add and commit all the newly changed files.</li>
+  <li>git subtree push --prefix dist origin gh-pages</li>
+  <li>Check the deployed url to see if the updates were deployed.</li>
+</ol>
+
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
