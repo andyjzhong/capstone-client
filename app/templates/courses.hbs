@@ -1,1 +1,10 @@
-{{outlet}}
+<h2>Courses</h2>
+
+<ul>
+{{#each model as |course|}}
+  <li>{{course.semester}}</li>
+  <li>{{course.grade}}</li>
+  <li>{{course.credits}}</li>
+  <li>{{course.name}}</li>
+{{/each}}
+</ul>

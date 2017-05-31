@@ -1,12 +1,15 @@
 {{!-- Navbar Container --}}
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+<nav class="navbar navbar-static-top">
+  <div class="main-nav-content">
     {{navbar-header}}
 
     <div class="collapse navbar-collapse" id="navigation" data-toggle="collapse" data-target="#navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
         <li>{{#link-to "users"}}Users{{/link-to}}</li>
+        {{/if}}
+        {{#if isAuthenticated}}
+        <li>{{#link-to "courses"}}Courses{{/link-to}}</li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -23,28 +26,35 @@
 </nav>
 
 {{!-- Begin Content --}}
-<h1>Andy's GPA Calculator App</h1>
-<br>
+<div class="main-content">
+  <h1>Andy's GPA Calculator App</h1>
+  <br>
 
-<h3>Directions for Deploying Client</h3>
-<br>
-<p>How's it going, dude. I put this here so we can all remember how to deploy the client side. You can remove this once you are familiar with the process.</p>
-<ol>
-  <li>Make sure you have saved and committed everything on your master branch.</li>
-  <li>git push origin master</li>
-  <li>git checkout gh-pages</li>
-  <li>Make sure you have saved and committed everything on your gh-pages branch.</li>
-  <li>ember build --environment=production</li>
-  <li>add and commit all the newly changed files.</li>
-  <li>git subtree push --prefix dist origin gh-pages</li>
-  <li>Check the deployed url to see if the updates were deployed.</li>
-</ol>
+  <h3>Directions for Deploying Client</h3>
+  <br>
+  <p>How's it going, dude. I put this here so we can all remember how to deploy the client side. You can remove this once you are familiar with the process.</p>
+  <ol>
+    <li>Make sure you have saved and committed everything on your master branch.</li>
+    <li>git push origin master</li>
+    <li>git checkout gh-pages</li>
+    <li>Make sure you have saved and committed everything on your gh-pages branch.</li>
+    <li>ember build --environment=production</li>
+    <li>add and commit all the newly changed files.</li>
+    <li>git subtree push --prefix dist origin gh-pages</li>
+    <li>Check the deployed url to see if the updates were deployed.</li>
+  </ol>
 
 
-{{#each flashMessages.queue as |flash|}}
-  {{flash-message flash=flash}}
-{{/each}}
+  {{#each flashMessages.queue as |flash|}}
+    {{flash-message flash=flash}}
+  {{/each}}
 
-<div class="col-md-8 col-md-offset-2">
-  {{outlet}}
-</div>
+  <div class="col-md-8 col-md-offset-2">
+    {{outlet}}
+  </div>
+</div> {{!-- End Main Content --}}
+
+<nav class="navbar navbar-static-bottom footer">
+  <div class="container-fluid">
+  </div>
+</nav>
