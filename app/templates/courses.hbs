@@ -5,6 +5,9 @@
   <li>{{course.semester}}</li>
   <li>{{course.grade}}</li>
   <li>{{course.credits}}</li>
-  <li>{{course.name}}</li>
+  <li>{{course.title}}</li>
+  <button class='btn btn-xs btn-danger' {{action 'delete'}}>
+  Delete
+  </button>
 {{/each}}
 </ul>

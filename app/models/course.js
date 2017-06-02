@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  coursename: DS.attr('string'),
+  title: DS.attr('string'),
   grade: DS.attr('string'),
   credits: DS.attr('number'),
   semester: DS.attr('string'),
